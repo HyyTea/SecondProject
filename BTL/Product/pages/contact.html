@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sản phẩm - Danh mục sản phẩm | Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit-no">
+    <link rel="stylesheet" href="../css/app.css">
+    <style>
+        .main {
+            width: 70%;
+            margin: 0 auto;
+        }
+        
+        .contact {
+            margin-bottom: 1em;
+        }
+        
+        .address {
+            margin-left: 0;
+            display: block;
+            float: left;
+            margin: 1% 0 1% 3.6%;
+            width: 29.5%;
+        }
+        
+        .list :ol,
+         :ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .phone {
+            display: block;
+            float: left;
+            margin: 1% 0 1% 3.6%;
+            width: 29.5%;
+        }
+        
+        .email {
+            margin-left: 0;
+            display: block;
+            float: left;
+            margin: 1% 0 1% 3.6%;
+            width: 29.5%;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .contactto input[type="text"] {
+            padding: 12px 10px;
+            width: 30.66%;
+            font-family: 'Open Sans', sans-serif;
+            margin: 12px 0;
+            border: 1px solid rgba(192, 192, 192, 0.61);
+            color: #626262;
+            background: #FFF;
+            float: left;
+            outline: none;
+            font-size: 0.85em;
+        }
+        
+        .text2 textarea {
+            height: 180px;
+        }
+        
+        .text2 input[type="text"],
+        .text2 textarea {
+            width: 97.7%;
+            margin: 12px 0;
+            border: 1px solid rgba(192, 192, 192, 0.61);
+            color: #626262;
+            font-family: 'Open Sans', sans-serif;
+            outline: none;
+            margin-bottom: 25px;
+            padding: 12px 10px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../web_mysqli/admincp/login.php"><img src="../ảnh/10.png" width=150 height="150"></a>
+            <div class="collapse">
+
+                <ul class="navitem">
+                    <li>
+                        <a id="link1" href="../../Home/BTLN2/trangchu.html" class="active">Trang chủ</a>
+                    </li>
+                    <li id="item2">
+                        <a href="product.php">Sản phẩm</a>
+                    </li>
+                    <li id="item3">
+                        <a href="about.html">Giới thiệu</a>
+                    </li>
+                    <li id="item4">
+                        <a href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <form class="formin" method="GET" action="search.html">
+                    <input class="control" type="text" placeholder="Tìm kiếm" name="keyword_tensanpham">
+                    <button class="button" type="submit">Search</button>
+                </form>
+            </div>
+            <ul class="CartLog">
+                <li class="Clog">
+                    <a href="../cart/cart.php"><img width="40" src=../ảnh/cart.png><input style="background-color:khaki;" type="button" value="Giỏ hàng"></a>
+                </li>
+                <li class="Clog">
+                    <a href="../php/login.php"><img width="30" src=../ảnh/login.png><input style="background-color:khaki;" type="button" value="Đăng nhập"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="contact">
+            <div class="address">
+                <h5>Address</h5>
+                <ul class="list">
+                    <li>
+                        <!-- <img src="images/home.png" alt=""> -->
+                        <div class="tex">
+                            <p>Hoàn Kiếm, Hanoi.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="phone">
+                <h5>Phone</h5>
+                <ul class="list">
+                    <li>
+                        <!-- <img src="images/phone.png" alt=""> -->
+                        <div class="tex">
+                            <p><span>Call us:</span>(+84)1234567</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="Email">
+                <h5>Email</h5>
+                <ul class="list">
+                    <li>
+                        <!-- <img src="images/email.png" alt=""> -->
+                        <div class="tex">
+                            <p><span class="mail"><a href="mailto:yoursite.com">info(at)dodoshop.com</a></span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <form method="post" action="">
+            <div class="contactform">
+                <div class="contactto">
+                    <input type="text" class="text" value="Tên..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên...';}">
+                    <input type="text" class="text" value="Email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}">
+                    <input type="text" class="text" value="Chủ đề..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Vấn đề...';}">
+                </div>
+                <div class="text2">
+                    <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn';}">Lời nhắn..</textarea>
+                </div>
+                <span><input type="submit" class="" value="Submit"></span>
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+</body>

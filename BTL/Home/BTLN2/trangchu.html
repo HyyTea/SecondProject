@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>Trang chủ</title>
+    <link rel="shorcut icon" href="g3.png" />
+    <!--Tạo logo cho trang web-->
+    <meta charset="utf-8">
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="phancss.css">
+    <!--Link truy cập css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!--Link truy cập lấy icon-->
+    <script>
+        var images = [
+            "g1.png",
+            "g2.png",
+            "g3.png",
+            "g4.png"
+        ];
+        var num = 0;
+
+        function next() {
+            var slider = document.getElementById("slider");
+            num++;
+            if (num >= images.length) {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+
+        function prev() {
+            var slider = document.getElementById("slider");
+            num--;
+            if (num < 0) {
+                num = images.length - 1;
+            }
+            slider.src = images[num];
+        }
+    </script>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img src="g3.png" style="width:10%;height:10%" />
+            <!--Ảnh logo shop-->
+        </a>
+        Đô Đô Shop
+
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fas fa-home"></i> Trang chủ
+                </a>
+            </li>
+            <li>
+                <a href="../../Product/pages/product.php">
+                    <i class="fas fa-list-ul"></i> Sản phẩm
+                </a>
+            </li>
+            <li>
+                <a href="../../Product/pages/about.html">
+                    <i class="fas fa-file-signature"></i> Giới thiệu
+                </a>
+            </li>
+            <li>
+                <a href="../../Product/pages/contact.html">
+                    <i class="fas fa-book"></i> Liên hệ
+                </a>
+            </li>
+            <li class="search">
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <!-- -------------------------------------------------------------------------------------->
+    <article>
+        <div>
+            <img id="slider" src="g1.png">
+            <button class="prev" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
+            <button class="next" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </article>
+    <script src="script.js"></script>
+    <div>
+        <a href="../../Product/php/logout.php">Đăng xuất</a>
+    </div>
+</body>
+
+</html>
